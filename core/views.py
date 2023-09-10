@@ -5,8 +5,8 @@ import pytz
 
 # Create your views here.
 def get_user_info(request):
-    slack_name = request.GET.get('slack_name', 'Folafolu Osilaja')
-    track = request.GET.get('track', 'Backend')
+    slack_name = request.GET.get('slack_name', 'default_name')
+    track = request.GET.get('track', 'default_track')
 
     current_day = timezone.now().strftime('%A')
     utc_time = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
