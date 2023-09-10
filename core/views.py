@@ -5,15 +5,14 @@ import pytz
 
 # Create your views here.
 def get_user_info(request):
-    slack_name = request.GET.get('slack_name', '')
-    track = request.GET.get
-
+    slack_name = request.GET.get('slack_name', 'Folafolu Osilaja')
+    track = request.GET.get('track', 'Backend')
 
     current_day = timezone.now().strftime('%A')
     utc_time = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
 
     github_repo_url = "https://github.com/F0laf0lu/hngtask1"
-    github_file_url = "https://github.com/username/repo/blob/main/file_name.ext"
+    github_file_url = "https://github.com/F0laf0lu/hngtask1/blob/main/core/views.py"
 
 
     response_data = {
